@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "My Extension",
+    "version": "1.0",
+
+    "background": {
+      "service_worker": "background.js"
+    },
+    "permissions": [
+        "activeTab","scripting","tabs","background"
+      ],
+    "content_scripts": [{
+    "matches": ["*://*.stackoverflow.com/*"],
+        "js": ["scripts/content.js"]
+      }],
+    "action": {
+      "default_popup": "popup/popup.html",
+      "default_title": "Test Extension",
+      "default_icon": "icon.png"
+    }
+  }
+  
